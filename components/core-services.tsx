@@ -1,5 +1,7 @@
 "use client"
 import { useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function CoreServices() {
   useEffect(() => {
@@ -8,35 +10,33 @@ export default function CoreServices() {
   
   const services = [
     {
-      title: "Digital Marketing",
-      description: "Strategic campaigns that drive growth and engagement across all digital channels.",
-      icon: "📱"
+      title: "Healthcare Management",
+      description: "Strategic planning and leadership support is the study of disease, it is the bridge between science and medicine. Also it underpins every aspect of patient care, from...",
+      image: "/smiling-female-doctor.png",
+      link: "/services/healthcare-management",
+      buttonText: "READ MORE"
     },
     {
-      title: "Brand Development",
-      description: "Creating compelling brand identities that resonate with your target audience.",
-      icon: "🎨"
+      title: "Process Optimization",
+      description: "Workflow redesign and compliance tools. Analyzing the radon or radon progeny concentrations with passive devices, or the act of calibrating radon or radon progen...",
+      image: "/private-healthcare-consultation.jpg",
+      link: "/services/process-optimization",
+      buttonText: "READ MORE"
     },
     {
-      title: "Content Creation",
-      description: "Engaging content that tells your story and connects with your customers.",
-      icon: "✍️"
+      title: "Digital Health & Innovation",
+      description: "Telehealth, app development, and tech adoption providers see patients from birth into early adulthood to make sure children achieve stay healthy. Our care includes...",
+      image: "/phone.png",
+      link: "/services/digital-health",
+      buttonText: "READ MORE"
     },
     {
-      title: "Web Development",
-      description: "Modern, responsive websites that deliver exceptional user experiences.",
-      icon: "💻"
+      title: "Creative Strategy",
+      description: "Branding, patient campaigns, and digital marketing requiring additional follow up. the Cardiac Clinic provides rapid access to professionals specialized in...",
+      image: "/creative.webp",
+      link: "/services/creative-strategy",
+      buttonText: "READ MORE"
     },
-    {
-      title: "Social Media Management",
-      description: "Building and managing your social presence to maximize engagement.",
-      icon: "📣"
-    },
-    {
-      title: "Analytics & Insights",
-      description: "Data-driven strategies backed by comprehensive analytics and reporting.",
-      icon: "📊"
-    }
   ]
 
   return (
@@ -46,35 +46,52 @@ export default function CoreServices() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Services
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Comprehensive creative solutions tailored to elevate your brand and drive meaningful results
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+            Comprehensive healthcare and creative solutions tailored to elevate your organization
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+              className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {service.title}
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                {service.description}
-              </p>
+              {/* Image Container */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  onError={(e) => {
+                    console.log(`Image failed to load: ${service.image}`);
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3 text-center">
+                  {service.title}
+                </h3>
+                <p className="text-white/70 text-sm leading-relaxed mb-6 min-h-[100px]">
+                  {service.description}
+                </p>
+
+                {/* Button */}
+                <Link href={service.link} className="block">
+                  <button className="w-full py-2.5 rounded-lg bg-gradient-to-r from-pink-500/80 to-blue-500/80 text-white font-medium text-sm transition-all duration-300 hover:from-pink-500 hover:to-blue-500 hover:shadow-lg transform hover:-translate-y-0.5">
+                    {service.buttonText} →
+                  </button>
+                </Link>
+              </div>
+
+              {/* Hover gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-pink-500/10 group-hover:via-blue-500/10 group-hover:to-pink-500/10 transition-all duration-500 pointer-events-none" />
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="/services"
-            className="inline-block px-8 py-3 rounded-full bg-white text-black font-medium text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105"
-          >
-            Explore All Services
-          </a>
         </div>
       </div>
     </section>
