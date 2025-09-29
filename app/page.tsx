@@ -19,8 +19,8 @@ export default function ShaderShowcase() {
       <CoreServices />
       <IndustriesWeServe />
       <Testimonials />
-      <RecentArticles />
       <CommitmentSection />
+      <RecentArticles />
     </ShaderBackground>
   )
 }
