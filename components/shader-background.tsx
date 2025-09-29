@@ -41,9 +41,9 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.3" />
             <feColorMatrix
               type="matrix"
-              values="1 0 0 0 0.02
-                      0 1 0 0 0.02
-                      0 0 1 0 0.05
+              values="1 0 0 0 0.01
+                      0 1 0 0 0.01
+                      0 0 1 0 0.02
                       0 0 0 0.9 0"
               result="tint"
             />
@@ -61,21 +61,23 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         </defs>
       </svg>
 
-      {/* Background Shaders - Fixed positioning */}
+      {/* Background Shaders - Matching MCA brand colors (dark magenta & blue) */}
       <div className="fixed inset-0 w-full h-full z-0">
         <MeshGradient
           className="absolute inset-0 w-full h-full"
-          colors={["#000000", "#8b5cf6", "#ffffff", "#1e1b4b", "#4c1d95"]}
+          colors={["#000000", "#1a0a2e", "#16003b", "#0f3460", "#2d0a3f"]}
           speed={0.3}
           backgroundColor="#000000"
         />
         <MeshGradient
-          className="absolute inset-0 w-full h-full opacity-60"
-          colors={["#000000", "#ffffff", "#8b5cf6", "#000000"]}
+          className="absolute inset-0 w-full h-full opacity-40"
+          colors={["#000000", "#e91e63", "#2196f3", "#000000"]}
           speed={0.2}
           wireframe="true"
           backgroundColor="transparent"
         />
+        {/* Additional subtle gradient for brand color hints */}
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/10 via-transparent to-blue-900/10" />
       </div>
 
       <div className="relative z-10">{children}</div>
