@@ -4,17 +4,18 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "They got us into the apartment in record time, but also was friendly, knowledgeable and went above and beyond.",
+        "MCA transformed our hospital's patient engagement strategy with their innovative digital solutions. Their blend of healthcare expertise and creative vision exceeded all our expectations.",
+author: "Dr. Rachel Martinez.",
       author: "Rina Brick",
     },
     {
       quote:
-        "The best locksmith I have ever dealt with. Fast, friendly and knowledgeable. To my pleasant surprise, they arrived much earlier than I expected to fix a broken lock and re-key a lock.",
+        "The process optimization they implemented reduced our clinic's wait times by 60%. Their team truly understands the unique challenges of healthcare operations and delivers real results.",
       author: "Sheila Marks",
     },
     {
       quote:
-        "It was a very good experience with this company! They were fast, and helpful! I highly recommend them to anyone! They definitely know how to get the job done right! Thanks again.",
+        "Outstanding creative work on our health awareness campaign! MCA's ability to make complex medical information accessible and engaging has been invaluable to our community outreach efforts.",
       author: "Johnny Samuel",
     },
   ]

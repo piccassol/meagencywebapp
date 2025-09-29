@@ -13,7 +13,7 @@ export default function HomePage() {
         {/* Hero Section - Main Announcement */}
         <section className="min-h-screen flex items-center justify-center px-6 relative">
           <div className="absolute inset-0">
-            <Image src="/sunset-beach-silhouette-person-sitting-on-pier.jpg" alt="Hero Background" fill className="object-cover opacity-60" />
+            <Image src="/images/sunset-beach-silhouette-person-sitting-on-pier.jpg" alt="Hero Background" fill className="object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60"></div>
           </div>
 
@@ -161,7 +161,7 @@ export default function HomePage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-blue-400 text-xs font-light uppercase tracking-wider">Sports</span>
+                    <span className="text-blue-400 text-xs font-light uppercase tracking-wider">Manc</span>
                   </div>
                   <h4 className="text-2xl font-light text-white">Sports</h4>
                 </div>

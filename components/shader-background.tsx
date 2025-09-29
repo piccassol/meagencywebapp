@@ -61,23 +61,23 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         </defs>
       </svg>
 
-      {/* Background Shaders - Matching MCA brand colors (dark magenta & blue) */}
+      {/* Background Shaders - Super Dark Midnight Blue */}
       <div className="fixed inset-0 w-full h-full z-0">
         <MeshGradient
           className="absolute inset-0 w-full h-full"
-          colors={["#000000", "#1a0a2e", "#16003b", "#0f3460", "#2d0a3f"]}
+          colors={["#000000", "#010814", "#020d1f", "#000511", "#01050f"]}
           speed={0.3}
           backgroundColor="#000000"
         />
         <MeshGradient
-          className="absolute inset-0 w-full h-full opacity-40"
-          colors={["#000000", "#e91e63", "#2196f3", "#000000"]}
+          className="absolute inset-0 w-full h-full opacity-20"
+          colors={["#000000", "#0a1929", "#001e3c", "#000000"]}
           speed={0.2}
           wireframe="true"
           backgroundColor="transparent"
         />
-        {/* Additional subtle gradient for brand color hints */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/10 via-transparent to-blue-900/10" />
+        {/* Very subtle midnight blue gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/5 via-transparent to-indigo-950/5" />
       </div>
 
       <div className="relative z-10">{children}</div>

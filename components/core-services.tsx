@@ -37,6 +37,13 @@ export default function CoreServices() {
       link: "/services/creative-strategy",
       buttonText: "READ MORE"
     },
+    {
+      title: "Arts & Entertainment",
+      description: "Creative productions, media content, and entertainment solutions that engage audiences and bring artistic visions to life through innovative storytelling and production...",
+      image: "/arts-entertainment.jpg",
+      link: "/arts-entertainment",
+      buttonText: "READ MORE"
+    }
   ]
 
   return (
@@ -82,7 +89,7 @@ export default function CoreServices() {
 
                 {/* Button */}
                 <Link href={service.link} className="block">
-                  <button className="w-full py-2.5 rounded-lg bg-gradient-to-r from-pink-500/80 to-blue-500/80 text-white font-medium text-sm transition-all duration-300 hover:from-pink-500 hover:to-blue-500 hover:shadow-lg transform hover:-translate-y-0.5">
+                  <button className="w-full py-2.5 rounded-lg bg-white text-black font-medium text-sm transition-all duration-300 hover:bg-white/90 hover:shadow-lg hover:shadow-white/20 transform hover:-translate-y-0.5">
                     {service.buttonText} →
                   </button>
                 </Link>
