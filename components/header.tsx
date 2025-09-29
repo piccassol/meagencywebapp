@@ -19,12 +19,6 @@ export default function Header() {
 
       {/* Navigation - visible on all screen sizes */}
       <nav className="flex items-center space-x-2 md:space-x-8 text-xs md:text-sm">
-        <Link href="/about" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
-          About
-        </Link>
-        <Link href="/services" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
-          Services
-        </Link>
         <Link href="/oui-care" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Oui Care
         </Link>
@@ -33,6 +27,12 @@ export default function Header() {
         </Link>
         <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg sm:hidden">
           Arts
+        </Link>
+        <Link href="/services" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
+          Services
+        </Link>
+        <Link href="/about" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
+          About
         </Link>
         <Link href="/contact" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Contact
