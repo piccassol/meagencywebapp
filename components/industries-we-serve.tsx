@@ -8,6 +8,12 @@ export default function IndustriesWeServe() {
     "Healthcare Entrepreneurs",
     "Hospitals & Health Systems",
     "Telehealth Startups",
+    "Music & Recording Artists",
+    "Sports Organizations & Athletes",
+    "Visual Arts & Galleries",
+    "Live Entertainment & Events",
+    "Film & Media Production",
+    "Performing Arts & Theater",
   ]
 
   return (
@@ -16,8 +22,8 @@ export default function IndustriesWeServe() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Industries We Serve</h2>
           <p className="text-lg text-white/80 max-w-4xl mx-auto">
-            We provide all aspects of medical practice for your whole family, including general check-ups or assisting
-            you with specific injuries.
+            From healthcare innovation to creative excellence, we partner with diverse industries to deliver 
+            transformative digital solutions that drive growth and engagement across all sectors.
           </p>
         </div>
 
