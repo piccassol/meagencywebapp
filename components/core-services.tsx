@@ -31,13 +31,6 @@ export default function CoreServices() {
         "Branding, patient campaigns, and digital marketing requiring additional follow up, the Cardiac Clinic provides rapid access to professionals specialized in...",
       link: "READ MORE",
     },
-    {
-      title: "Arts & Entertainment",
-      image: "/arts-entertainment-creative-professional.jpg",
-      description:
-        "Creative content development, entertainment marketing, and artistic collaboration services. We bridge healthcare with creative industries to develop engaging patient education and wellness programs...",
-      link: "READ MORE",
-    },
   ]
 
   return (
@@ -51,7 +44,7 @@ export default function CoreServices() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}

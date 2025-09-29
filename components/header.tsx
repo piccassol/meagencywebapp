@@ -27,6 +27,9 @@ export default function Header() {
         <Link href="/oui-care" className="text-white/80 hover:text-white text-sm font-light transition-colors">
           Oui Care
         </Link>
+        <Link href="/arts-entertainment" className="text-white/80 hover:text-white text-sm font-light transition-colors">
+          Arts & Entertainment
+        </Link>
         <Link href="/contact" className="text-white/80 hover:text-white text-sm font-light transition-colors">
           Contact
         </Link>
