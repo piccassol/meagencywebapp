@@ -1,52 +1,82 @@
 "use client"
-import Link from "next/link"
-import Image from "next/image"
+import { useEffect } from 'react'
 
-export default function Header() {
+export default function CoreServices() {
+  useEffect(() => {
+    console.log('CoreServices component mounted!')
+  }, [])
+  
+  const services = [
+    {
+      title: "Digital Marketing",
+      description: "Strategic campaigns that drive growth and engagement across all digital channels.",
+      icon: "📱"
+    },
+    {
+      title: "Brand Development",
+      description: "Creating compelling brand identities that resonate with your target audience.",
+      icon: "🎨"
+    },
+    {
+      title: "Content Creation",
+      description: "Engaging content that tells your story and connects with your customers.",
+      icon: "✍️"
+    },
+    {
+      title: "Web Development",
+      description: "Modern, responsive websites that deliver exceptional user experiences.",
+      icon: "💻"
+    },
+    {
+      title: "Social Media Management",
+      description: "Building and managing your social presence to maximize engagement.",
+      icon: "📣"
+    },
+    {
+      title: "Analytics & Insights",
+      description: "Data-driven strategies backed by comprehensive analytics and reporting.",
+      icon: "📊"
+    }
+  ]
+
   return (
-    <header className="relative z-20 flex items-center justify-between p-4 md:p-6">
-      <div className="flex items-center">
-        <Link href="/" className="hover:opacity-90 transition-opacity">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-dsyNDELoB7alxoLZslkgZnr4lNSXQM.webp"
-            alt="Me Creative Agency LLC"
-            width={180}
-            height={60}
-            className="h-8 md:h-12 w-auto"
-          />
-        </Link>
-      </div>
+    <section className="relative z-10 py-20 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            Comprehensive creative solutions tailored to elevate your brand and drive meaningful results
+          </p>
+        </div>
 
-      {/* Navigation - visible on all screen sizes */}
-      <nav className="flex items-center space-x-4 md:space-x-8 text-xs md:text-sm">
-        <Link href="/about" className="text-white/80 hover:text-white font-light transition-colors">
-          About
-        </Link>
-        <Link href="/services" className="text-white/80 hover:text-white font-light transition-colors">
-          Services
-        </Link>
-        <Link href="/oui-care" className="text-white/80 hover:text-white font-light transition-colors">
-          Oui Care
-        </Link>
-        <Link href="/arts-entertainment" className="text-white/80 hover:text-white font-light transition-colors hidden sm:inline">
-          Arts & Entertainment
-        </Link>
-        <Link href="/arts-entertainment" className="text-white/80 hover:text-white font-light transition-colors sm:hidden">
-          Arts
-        </Link>
-        <Link href="/contact" className="text-white/80 hover:text-white font-light transition-colors">
-          Contact
-        </Link>
-      </nav>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
 
-      {/* Get Started button - only visible on desktop */}
-      <div className="hidden md:flex items-center">
-        <Link href="/contact">
-          <button className="px-6 py-2 rounded-full bg-white text-black font-medium text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105">
-            Get Started
-          </button>
-        </Link>
+        <div className="text-center mt-12">
+          <a
+            href="/services"
+            className="inline-block px-8 py-3 rounded-full bg-white text-black font-medium text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105"
+          >
+            Explore All Services
+          </a>
+        </div>
       </div>
-    </header>
+    </section>
   )
 }
