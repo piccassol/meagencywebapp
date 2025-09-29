@@ -17,7 +17,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <nav className="flex items-center space-x-8">
+      <nav className="hidden md:flex items-center space-x-8">
         <Link href="/about" className="text-white/80 hover:text-white text-sm font-light transition-colors">
           About
         </Link>
@@ -35,9 +35,16 @@ export default function Header() {
         </Link>
       </nav>
 
+      {/* Mobile Navigation */}
+      <nav className="flex md:hidden items-center space-x-4">
+        <Link href="/contact" className="text-white/80 hover:text-white text-sm font-light transition-colors">
+          Contact
+        </Link>
+      </nav>
+
       <div className="flex items-center">
         <Link href="/contact">
-          <button className="px-6 py-2 rounded-full bg-white text-black font-medium text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105">
+          <button className="px-4 py-2 md:px-6 md:py-2 rounded-full bg-white text-black font-medium text-xs md:text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105">
             Get Started
           </button>
         </Link>
