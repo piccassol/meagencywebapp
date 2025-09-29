@@ -20,9 +20,9 @@ export default function ShaderShowcase() {
       <PulsingCircle />
       <CoreServices />
       <IndustriesWeServe />
-      <RecentArticles />
       <Testimonials />
       <CommitmentSection />
+      <RecentArticles />
       <footer className="bg-gray-900 text-white py-6 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
