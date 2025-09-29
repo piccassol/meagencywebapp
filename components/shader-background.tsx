@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef, useState } from "react"
 import { MeshGradient } from "@paper-design/shaders-react"
 
@@ -67,14 +66,13 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
           className="absolute inset-0 w-full h-full"
           colors={["#000000", "#010814", "#020d1f", "#000511", "#01050f"]}
           speed={0.3}
-          backgroundColor="#000000"
+          style={{ backgroundColor: "#000000" }}
         />
         <MeshGradient
           className="absolute inset-0 w-full h-full opacity-20"
           colors={["#000000", "#0a1929", "#001e3c", "#000000"]}
           speed={0.2}
           wireframe="true"
-          backgroundColor="transparent"
         />
         {/* Very subtle midnight blue gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/5 via-transparent to-indigo-950/5" />

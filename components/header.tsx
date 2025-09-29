@@ -8,7 +8,7 @@ export default function Header() {
       <div className="flex items-center">
         <Link href="/" className="hover:opacity-90 transition-opacity">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-dsyNDELoB7alxoLZslkgZnr4lNSXQM.webp"
+            src="/logo.webp"
             alt="Me Creative Agency LLC"
             width={180}
             height={60}

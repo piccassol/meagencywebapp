@@ -37,13 +37,6 @@ export default function CoreServices() {
       link: "/services/creative-strategy",
       buttonText: "READ MORE"
     },
-    {
-      title: "Arts & Entertainment",
-      description: "Creative productions, media content, and entertainment solutions that engage audiences and bring artistic visions to life through innovative storytelling and production...",
-      image: "/arts-entertainment.jpg",
-      link: "/arts-entertainment",
-      buttonText: "READ MORE"
-    }
   ]
 
   return (
@@ -58,7 +51,7 @@ export default function CoreServices() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
