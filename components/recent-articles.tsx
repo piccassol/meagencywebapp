@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 export default function RecentArticles() {
   const articles = [
@@ -48,10 +49,13 @@ export default function RecentArticles() {
             >
               <CardContent className="p-0">
                 <div className="aspect-[4/3] overflow-hidden rounded-t-lg relative">
-                  <img
-                    src={article.image || "/placeholder.svg"}
+                  <Image
+                    src={article.image}
                     alt={article.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    onLoadingComplete={() => console.log(`Loaded image: ${article.image} for ${article.title}`)}
                   />
                   <Badge className={`absolute top-4 left-4 ${article.categoryColor} text-white border-0`}>
                     {article.category}
