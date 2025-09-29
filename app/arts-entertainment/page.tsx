@@ -161,7 +161,7 @@ export default function HomePage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-blue-400 text-xs font-light uppercase tracking-wider">EA Sports FC</span>
+                    <span className="text-blue-400 text-xs font-light uppercase tracking-wider">Sports</span>
                   </div>
                   <h4 className="text-2xl font-light text-white">Sports</h4>
                 </div>
