@@ -22,12 +22,6 @@ export default function Header() {
         <Link href="/oui-care" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Oui Care
         </Link>
-        <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg hidden sm:inline">
-          Arts & Entertainment
-        </Link>
-        <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg sm:hidden">
-          Arts
-        </Link>
         <Link href="/services" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Services
         </Link>
@@ -36,6 +30,9 @@ export default function Header() {
         </Link>
         <Link href="/contact" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Contact
+        </Link>
+        <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg hidden sm:inline">
+          Arts & Entertainment
         </Link>
       </nav>
 
