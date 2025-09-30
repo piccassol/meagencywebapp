@@ -31,8 +31,9 @@ export default function Header() {
         <Link href="/contact" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
           Contact
         </Link>
-        <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg hidden sm:inline">
-          Arts & Entertainment
+        <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
+          <span className="hidden sm:inline">Arts & Entertainment</span>
+          <span className="sm:hidden">Arts</span>
         </Link>
       </nav>
 
