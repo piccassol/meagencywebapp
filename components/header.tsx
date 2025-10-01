@@ -16,7 +16,6 @@ export default function Header() {
           />
         </Link>
       </div>
-
       {/* Navigation - visible on all screen sizes */}
       <nav className="flex items-center space-x-2 md:space-x-8 text-xs md:text-sm">
         <Link href="/oui-care" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
@@ -32,11 +31,9 @@ export default function Header() {
           Contact
         </Link>
         <Link href="/arts-entertainment" className="text-white hover:text-white/90 font-semibold transition-colors drop-shadow-lg">
-          <span className="hidden sm:inline">Arts & Entertainment</span>
-          <span className="sm:hidden">Arts</span>
+          Arts
         </Link>
       </nav>
-
       <div className="flex items-center">
         <Link href="/contact">
           <button className="px-3 py-1.5 md:px-6 md:py-2 rounded-full bg-white text-black font-bold text-xs md:text-sm transition-all duration-300 hover:bg-white/90 hover:scale-105 shadow-lg">
